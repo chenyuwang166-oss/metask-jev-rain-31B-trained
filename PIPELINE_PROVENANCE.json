@@ -1,0 +1,96 @@
+{
+  "adapter_module_sha256": "dd056d9511717afbd0bdf56c2fe3a3c58ae7abd90c86c5a53b5c1f4d5d215f76",
+  "adapter_reference": "model-subdir:adapter",
+  "arm": "trained",
+  "builder_sha256": "9b96dfa37f339b1c2a1e16be2686f3e494940c2c2cb3aa83d4d858b29b9da6cd",
+  "config_module_sha256": "d6533d7ec1933fc467f58d041a1d8174c4b3bb224e18f577f98608c843c97b23",
+  "copied_request_code_unchanged": true,
+  "core_patch": null,
+  "documents_pending_final_wording": [],
+  "f_source_files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    ".gitignore": "4254e460a0ff807e7fd68e104efa8935a769377f09876b8b4fec0fb0b544a0e6",
+    "LICENSE": "99de38324fdb2fb51117d4aa92c7fdf31260b780a05a60df3199a219e7c38eee",
+    "attention.py": "9c887f4e5f8ea2858f79a629e684ea71b07359d49d2a0bf31b5f993cb367e547",
+    "backends.py": "e0613ebb8e05fd22673e0502a131dcc33a5af563998cf5a12143878131518f93",
+    "bench.py": "7f158bcb4dcd90395c21535527abe4283d6ca5dab92ded0be47cc352f022f0cd",
+    "config.json": "ea80c183f2de2b94ff67b5e7d99f6ff338767cc7c1a4dcf5ac002386f995e959",
+    "core.py": "fb4169ed1c6c9d69e406e9a33d69a71cc49aa48e0155d9544bb9f3bf41690a17",
+    "launch.py": "2136bcb3330a80ad3f7e73ee5c99633a41e26fa922f5c8aef6f7df696fb7ce11",
+    "model_setup.py": "6c7cd992039327178b72247b8b0f44214a5a00e43abcc0f583130dfe91586dd7",
+    "quota.py": "8b039bc30c13e6c5a63668f3064fbb311358f9295922a817ec26f09893936f8d",
+    "reconcile_usage.py": "a381dca414201652f254f5101f08d4cbba27b69c3abeb50e6dad86e0e151aba7",
+    "server.py": "2cb085c1bf0f68758097afee55ecad2ef7ecd76dcced00c1b3f927b49151e213"
+  },
+  "input_budget": 6653,
+  "launch_patch": "reference launch.py + identity/adapter verification + per-run materialized config under --state-dir + routed mode (the finalized-before-routed guard applies unless --allow-nonformal) + VLLM_BATCH_INVARIANT=1",
+  "measured_environment": {
+    "entries": 201,
+    "equal_to_source_package_measured_lock": false,
+    "files": {
+      "requirements.lock": "4536b444d83518a5d696ebf262aa9d3da156fe2d898f96582e4ab52d70cb4e4d",
+      "requirements.measured.lock": "888ec6b0d3fad1a17e9323c1ab9321040303c79df3c9fe43e6f755cf2ab24b91"
+    },
+    "freeze_sha256": "888ec6b0d3fad1a17e9323c1ab9321040303c79df3c9fe43e6f755cf2ab24b91",
+    "source": "pip freeze of the measurement service environment"
+  },
+  "model_key": "metask-gemma4-31b-lora-w4a16",
+  "model_name": "metask-jev-rain-31B-trained",
+  "prior_fitted_parameters_reused": false,
+  "protocol": "adapter_arm_31b_v3",
+  "quota": 0.056,
+  "route": "unmerged LoRA adapter (adapter/) on the official W4A16 compressed-tensors base",
+  "served_base": {
+    "repo_id": "google/gemma-4-31B-it-qat-w4a16-ct",
+    "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d"
+  },
+  "served_mode": "routed",
+  "service_fit_status": "frozen",
+  "service_policy": {
+    "core_patch": null,
+    "cost_fuse": {
+      "arm": 0.9,
+      "enabled": true,
+      "release": 0.85,
+      "warmup": 100
+    },
+    "draft": {
+      "max_new_tokens": 256,
+      "reasoning_words": 160
+    },
+    "fit_n": 231,
+    "fit_protocol": "31b-adapter-arm-v3-routed",
+    "mode": "routed",
+    "noul_p_cal": 0.898,
+    "protocol": "adapter_arm_31b_v3",
+    "quota": 0.056,
+    "slow_excluded_types": [],
+    "slow_max_prompt_tokens": 840,
+    "threshold_rule": "eligible_items",
+    "unparsed_policy": "force_answer",
+    "v3_params_sha256": "b28ed73bb5a36e99a280a47a6b846e0c5b2de54f34a96efa4a10754b71ea7573"
+  },
+  "source_files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    ".gitignore": "4254e460a0ff807e7fd68e104efa8935a769377f09876b8b4fec0fb0b544a0e6",
+    "LICENSE": "99de38324fdb2fb51117d4aa92c7fdf31260b780a05a60df3199a219e7c38eee",
+    "attention.py": "9c887f4e5f8ea2858f79a629e684ea71b07359d49d2a0bf31b5f993cb367e547",
+    "backends.py": "e0613ebb8e05fd22673e0502a131dcc33a5af563998cf5a12143878131518f93",
+    "bench.py": "7f158bcb4dcd90395c21535527abe4283d6ca5dab92ded0be47cc352f022f0cd",
+    "config.json": "ea80c183f2de2b94ff67b5e7d99f6ff338767cc7c1a4dcf5ac002386f995e959",
+    "core.py": "fb4169ed1c6c9d69e406e9a33d69a71cc49aa48e0155d9544bb9f3bf41690a17",
+    "launch.py": "2136bcb3330a80ad3f7e73ee5c99633a41e26fa922f5c8aef6f7df696fb7ce11",
+    "model_setup.py": "6c7cd992039327178b72247b8b0f44214a5a00e43abcc0f583130dfe91586dd7",
+    "quota.py": "8b039bc30c13e6c5a63668f3064fbb311358f9295922a817ec26f09893936f8d",
+    "reconcile_usage.py": "a381dca414201652f254f5101f08d4cbba27b69c3abeb50e6dad86e0e151aba7",
+    "server.py": "2cb085c1bf0f68758097afee55ecad2ef7ecd76dcced00c1b3f927b49151e213"
+  },
+  "status": "evaluated_service_mirror",
+  "training_base": {
+    "repo_id": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+    "revision": "1e4d8beecacb8b7590c1d8bedd7335f687bf311f"
+  },
+  "v3_gates_sha256": "b34242f06caf473f0400a339da62a10fd294d955985e6f92e2e6914e67ca7882",
+  "v3_params_sha256": "b28ed73bb5a36e99a280a47a6b846e0c5b2de54f34a96efa4a10754b71ea7573",
+  "variant": "key_value_aligned"
+}

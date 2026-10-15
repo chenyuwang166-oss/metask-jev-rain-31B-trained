@@ -1,0 +1,77 @@
+{
+  "config": {
+    "change": "package.finalized: false -> true (single textual replacement)",
+    "frozen_sha256": "5bc329704e6ea261ec4c53c39a640b4762e20e43b0d06eff514f16d2d0f6beef",
+    "prepared_sha256": "32bbe4fe96f56bbde05c11769969c880ae8b1f066d15d0980cfed727dab602e0"
+  },
+  "evidence": {
+    "binding_sha256": "2fe383cb2d956e9e1246766786c9d154d8565e1aea6c6fe70a3f5dbb52cc6b88",
+    "cost_check_dataset": "public231",
+    "measured_evidence_sha256": "1a42285b0613d68cd710aa63cf9745d21ba889ab43e2c1b6ca1b1266f1a9f6b2",
+    "package_smoke_plan_sha256": "03d813801e98c9b49eeebc8308632b67e48759bb686d4c5ee4e1a11bf662bfdb",
+    "package_smoke_sha256": "a8d65d728117ccbbd32c0f96d7485f03ba5f4de42d1e0c4726daf28531105406",
+    "q": 0.056,
+    "report_sha256": {
+      "arm_selection": "5ce5f74a3bb8f2f38d2bc95009dc76e7ce8d4f23655bffce9ebea2162025c624",
+      "base_eligibility": "087359b5cc806f41ed3802f0d1816491bc9a296c5e2965226c9fa6710d5e35e1",
+      "eligibility": "e81857ed77704951c96732433a2aaa7eadf5beef44724e846c99cfb7526ee786",
+      "reproducibility": "45394e5c97f492737554a3536f551b6685b0f25505f5d07c7169f936ce61ade9",
+      "service_report": "1ff4ab35a865702b663a2a96ce66d0a8b478da901baa685c1aadae9cf92335d5"
+    },
+    "v3_gates_sha256": "b34242f06caf473f0400a339da62a10fd294d955985e6f92e2e6914e67ca7882"
+  },
+  "frozen_utc": "2026-10-13T08:29:44Z",
+  "model_identity_sha256": "0513d121db967ec1a6aaccf627d3c42149d092dd027298da5b53684b030821ea",
+  "prepared_files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    ".gitignore": "4254e460a0ff807e7fd68e104efa8935a769377f09876b8b4fec0fb0b544a0e6",
+    "ADAPTER_MANIFEST.json": "1cac55fdb7480b82d3d06fa04fbe688e7ea068c4a64722d8274429f9210af6c0",
+    "DISCLOSURE.md": "4abb00e032d9a402298787aaf52b93fe48a84582da1f44dd33630f31edb1e919",
+    "LICENSE": "99de38324fdb2fb51117d4aa92c7fdf31260b780a05a60df3199a219e7c38eee",
+    "MEASURED_EVIDENCE.json": "1a42285b0613d68cd710aa63cf9745d21ba889ab43e2c1b6ca1b1266f1a9f6b2",
+    "MODEL_CARD.md": "b274d2276d916a513c09cc2b6c362a8a74a69c6e0726b2c8f43241dfadd852e4",
+    "MODEL_MANIFEST.json": "1e1b426b38a46b27dd3fce512175884a90b39a481e27df7a7a26244cb148d2a7",
+    "PIPELINE_PROVENANCE.json": "20d8bb745546666de3753f992c4fe86c46fe9d649af794c0c068f7436d2e3d03",
+    "README.md": "2fb603a24bd3fcde09ac6196861470f9d846def2bc048df76a6a433b957292a3",
+    "SERVICE_LOCK.json": "05bc556a3eff0de8aa5ebe2fea8af75c5159b0b9cea999f6963d9ea1ce41c0f7",
+    "attention.py": "9c887f4e5f8ea2858f79a629e684ea71b07359d49d2a0bf31b5f993cb367e547",
+    "backends.py": "e0613ebb8e05fd22673e0502a131dcc33a5af563998cf5a12143878131518f93",
+    "bench.py": "7f158bcb4dcd90395c21535527abe4283d6ca5dab92ded0be47cc352f022f0cd",
+    "calibration.json": "5b60ca8516b93982724145bc2227404c4c53a6f5657b4bf2155108c2f001685f",
+    "config.json": "32bbe4fe96f56bbde05c11769969c880ae8b1f066d15d0980cfed727dab602e0",
+    "core.py": "fb4169ed1c6c9d69e406e9a33d69a71cc49aa48e0155d9544bb9f3bf41690a17",
+    "fit_report.json": "342edc344b93c5403394f49e8f14731e8f9114661fbcd025042e2c42a3106f66",
+    "launch.py": "d8f966264dfa5d977ef6444364e1eb4128cf34ed1b60bc94a45f2649f6fce2d3",
+    "model_setup.py": "6c7cd992039327178b72247b8b0f44214a5a00e43abcc0f583130dfe91586dd7",
+    "pkg_check.py": "0d128db9475d84c199f7f28c6b728356663e5aba7858f5f4a6bc0a5d1dc87492",
+    "prepare_model.sh": "454a0090ce0187bf6f4b4825a537183cf095c503592a7f673f7f57329258dc44",
+    "quota.py": "8b039bc30c13e6c5a63668f3064fbb311358f9295922a817ec26f09893936f8d",
+    "reconcile_usage.py": "a381dca414201652f254f5101f08d4cbba27b69c3abeb50e6dad86e0e151aba7",
+    "requirements.lock": "4536b444d83518a5d696ebf262aa9d3da156fe2d898f96582e4ab52d70cb4e4d",
+    "requirements.measured.lock": "888ec6b0d3fad1a17e9323c1ab9321040303c79df3c9fe43e6f755cf2ab24b91",
+    "selftest.py": "08d5cfceb703748b407ce0223dee2807bf49f27b4f9bbd28c43e9738673699e6",
+    "selftest.sh": "d0cc8cc9068667aec3525861e0d61ac8fc9bb617b90f7fee7818af9dc0af154e",
+    "serve.sh": "13008367a9b37988de9c7acfa1d2340ca7dea502fd352887fc61783749d279c3",
+    "server.py": "2cb085c1bf0f68758097afee55ecad2ef7ecd76dcced00c1b3f927b49151e213"
+  },
+  "prepared_manifest_sha256": "e0a8dbcae77ca0dcf0586271303c3bdcea3a2935e38dd5ead0edec16dd678028",
+  "protocol": "adapter_arm_31b_v3",
+  "replaced_documents": {
+    "DISCLOSURE.md": {
+      "frozen_sha256": "b80271847ccd21ee8bcec4e3749c3d4db8075bbdb0d3a51310eadf3a86a7802b",
+      "prepared_sha256": "4abb00e032d9a402298787aaf52b93fe48a84582da1f44dd33630f31edb1e919"
+    },
+    "MODEL_CARD.md": {
+      "frozen_sha256": "d562c659d9d8bee62cb3bbfbba2a7c08d2dbb4d987169069cc0e850151d4068b",
+      "prepared_sha256": "b274d2276d916a513c09cc2b6c362a8a74a69c6e0726b2c8f43241dfadd852e4"
+    },
+    "README.md": {
+      "frozen_sha256": "b87641911dd2d33823c846a3d522e15662c58541635f489d62693d4e3b45d31d",
+      "prepared_sha256": "2fb603a24bd3fcde09ac6196861470f9d846def2bc048df76a6a433b957292a3"
+    }
+  },
+  "repo_id": "MeTask-Rain/metask-jev-rain-31B-trained",
+  "revision": "9392335f5a17395ecd70049f85b1909d53500144",
+  "schema": "adapter_arm_31b_freeze_v1",
+  "status": "FROZEN"
+}

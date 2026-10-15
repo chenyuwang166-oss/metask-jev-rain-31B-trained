@@ -1,0 +1,55 @@
+{
+  "adapter_effect_passed": true,
+  "arm": "trained",
+  "binding_sha256": "2fe383cb2d956e9e1246766786c9d154d8565e1aea6c6fe70a3f5dbb52cc6b88",
+  "eligibility": {
+    "adjusted_p50_seconds": 0.6235626056790352,
+    "conditions": {
+      "VLLM_BATCH_INVARIANT": "1",
+      "VLLM_USE_FLASHINFER_SAMPLER": "0",
+      "accounting": "engine (submitted - cached input; generated output)",
+      "gpu": [
+        "NVIDIA H200"
+      ],
+      "input_budget": 6653,
+      "latency": "adjusted p50 = 2 * raw p50 + 0.15 s; raw = in-process Service.answer wall time; model load and warm-up excluded; conversion not recalibrated on this GPU",
+      "prices": {
+        "input_per_million": 0.09,
+        "output_per_million": 0.34
+      }
+    },
+    "cost_check_dataset": "public231",
+    "cost_per_1000_decisions_usd": 0.0603208658008658,
+    "eligible": true,
+    "n": 231,
+    "raw_p50_seconds": 0.2367813028395176,
+    "routing": {
+      "fallback_decisions": 0,
+      "max_decision_latency_seconds": 7.992699788883328,
+      "slow_decisions": 4,
+      "slow_share": 0.017316017316017316,
+      "timeouts_or_slow_failures": []
+    },
+    "verdict": "eligible"
+  },
+  "frozen": true,
+  "model_identity_sha256": "0513d121db967ec1a6aaccf627d3c42149d092dd027298da5b53684b030821ea",
+  "protocol": "adapter_arm_31b_v3",
+  "q": 0.056,
+  "report_sha256": {
+    "arm_selection": "5ce5f74a3bb8f2f38d2bc95009dc76e7ce8d4f23655bffce9ebea2162025c624",
+    "eligibility": "e81857ed77704951c96732433a2aaa7eadf5beef44724e846c99cfb7526ee786",
+    "reproducibility": "45394e5c97f492737554a3536f551b6685b0f25505f5d07c7169f936ce61ade9"
+  },
+  "reproducibility": {
+    "VLLM_BATCH_INVARIANT": "1",
+    "allowed_difference": 0.005,
+    "max_probability_difference": 0.0,
+    "n": 50,
+    "passed": true,
+    "repeats": 4
+  },
+  "signed": false,
+  "v3_gates_sha256": "b34242f06caf473f0400a339da62a10fd294d955985e6f92e2e6914e67ca7882",
+  "variant": "key_value_aligned"
+}

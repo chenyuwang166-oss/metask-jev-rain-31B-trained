@@ -1,0 +1,246 @@
+{
+  "adapter_files": {
+    "adapter_config.json": {
+      "sha256": "140bb00c832d117f57d29650dabe50e992b2e5064e908aaa29230b3ce19ca2c4",
+      "size": 22953
+    },
+    "adapter_model.safetensors": {
+      "sha256": "2b9568998ffed5d133223ffdff03056be297285c643122db4d45365d0bd86970",
+      "size": 494595208
+    }
+  },
+  "arm": "trained",
+  "complete": true,
+  "config_sha256": "5cebe511ef103d5104539d3ffa34435274c6a3bc08dbf40d5f80f9ec0ce3455a",
+  "draft": 256,
+  "elapsed_seconds": 0.0,
+  "engine_lora": {
+    "lora_dtype": "torch.bfloat16",
+    "max_lora_rank": 16,
+    "max_loras": 1
+  },
+  "fast_rows_source": {
+    "fit_report_sha256": "252cb2baf2ecb21a7892cb34b9334c1bad5f59fe7b924dd7f868addf3f27081e",
+    "protocol": "adapter_arm_31b_v1",
+    "records_sha256": "5e118133ce686b2d12b8d8a58b6e68560221c106eec54438dcfe1110e7ecfe7e",
+    "role": "q0 public231 fast-only collection of this arm",
+    "service_lock_sha256": "50a4c56c5c9fbfbde9c127ad0247736fa16355bc8deae90b5311f3ba19a03d44"
+  },
+  "fit_protocol": "31b-adapter-arm-v3-routed",
+  "input_budget": 6653,
+  "isolation_sha256": "802bfec07914c4c10dbdd35fdfdced0ef88945b06717252038da35b0b0d9bf99",
+  "model_sha256": "ddb0a8178194de6d3a3ed6e5a00ea01d6d89c143d43d169a68ad9561636cf4ff",
+  "n": 231,
+  "noul_constant": {
+    "applied_to": [
+      "fast",
+      "slow",
+      "fallback"
+    ],
+    "fitted_on": "the 74 yes/no items of the 231 public items, in-sample fast fit",
+    "fitted_values": {
+      "fallback": 0.9459459459459459,
+      "fast": 0.9459459459459459,
+      "slow": 0.9459459459459459
+    },
+    "outputs": [
+      0.898,
+      0.102
+    ],
+    "params_sha256": "b28ed73bb5a36e99a280a47a6b846e0c5b2de54f34a96efa4a10754b71ea7573",
+    "provenance": {
+      "development": {
+        "accuracy": 0.897815362931642,
+        "n": 1419,
+        "standard_error": 0.010166783957967924,
+        "standard_error_kind": "clustered by source group (663 groups)"
+      },
+      "result_sha256": "6cd7105b25050ece8ab7e99cd437db38368f6169bb452908785e413a3cdbe26a",
+      "rule": "Rule (v3, own development data only): the yes/no accuracy of our own held-out development data, rounded to 3 decimals. No leaderboard result of any kind was used for this constant.",
+      "rule_sha256": "be93d0ba00dd1a268f8722955111622ab71f0035ba66c60db86c4e88d35f0dbc"
+    },
+    "rule": "Rule (v3, own development data only): the yes/no accuracy of our own held-out development data, rounded to 3 decimals. No leaderboard result of any kind was used for this constant.",
+    "value": 0.898
+  },
+  "numeric_config": {
+    "NVIDIA_TF32_OVERRIDE": "0",
+    "VLLM_BATCH_INVARIANT": "1",
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "dtype": "bfloat16",
+    "engine_lora": {
+      "lora_dtype": "torch.bfloat16",
+      "max_lora_rank": 16,
+      "max_loras": 1
+    },
+    "postload_verified": {
+      "NVIDIA_TF32_OVERRIDE": "0",
+      "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": null,
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false,
+      "float32_matmul_precision": "highest"
+    },
+    "process_environment": {
+      "DO_NOT_TRACK": "1",
+      "HF_DATASETS_OFFLINE": "1",
+      "HF_HUB_DISABLE_TELEMETRY": "1",
+      "HF_HUB_OFFLINE": "1",
+      "NVIDIA_TF32_OVERRIDE": "0",
+      "TRANSFORMERS_OFFLINE": "1",
+      "VLLM_BATCH_INVARIANT": "1",
+      "VLLM_NO_USAGE_STATS": "1",
+      "VLLM_USE_FLASHINFER_SAMPLER": "0",
+      "VLLM_WORKER_MULTIPROC_METHOD": "spawn"
+    },
+    "startup": {
+      "applied_environment": {
+        "DO_NOT_TRACK": "1",
+        "PYTHONUNBUFFERED": "1",
+        "VLLM_HOST_IP": "127.0.0.1",
+        "VLLM_NO_USAGE_STATS": "1",
+        "VLLM_USE_FLASHINFER_SAMPLER": "0"
+      },
+      "removed_attention_environment": {
+        "JEV_ATTENTION_BACKEND": null,
+        "VLLM_ATTENTION_BACKEND": null
+      },
+      "startup_environment_policy": {
+        "operator_cache_environment_preserved": true,
+        "removed_attention_variables": [
+          "VLLM_ATTENTION_BACKEND",
+          "JEV_ATTENTION_BACKEND"
+        ],
+        "reused_function": "child_environment",
+        "source": "reference launch.py",
+        "source_sha256": "2136bcb3330a80ad3f7e73ee5c99633a41e26fa922f5c8aef6f7df696fb7ce11"
+      }
+    },
+    "torch_version": "2.13.0+cu130",
+    "versions": {
+      "compressed-tensors": "0.17.0",
+      "tokenizers": "0.23.2",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.17.0",
+      "triton": "3.7.1",
+      "vllm": "0.31.0"
+    }
+  },
+  "phases": [
+    "q0 public231 fast-only rows of the arm (reused, hash-bound)",
+    "offline routed fit of the v3 slow setting",
+    "v3 yes/no constant in the fast, slow and fallback blocks"
+  ],
+  "protocol": "adapter_arm_31b_v3",
+  "public_data_sha256": "d7ac378b817b9c32c2128a83bb8699f5770439503f7204c79572e2749319b5d4",
+  "public_fit_only": true,
+  "public_identity": {
+    "contains_public_benchmark": true,
+    "contains_sealed_benchmark": false,
+    "data_sha256": "8e7b2fec1275413649d2894670cbe3ea4a734c768a01ff833697123b2b44562c",
+    "n": 231,
+    "order_sha256": "3cac6d401ca18059628f0f48c8d7f974cbbea020f39f28109eaf84bd1a0f22e1",
+    "origin": "public231_crlf",
+    "public_sha256": {
+      "easy.jsonl": "314cd493a4c080fca5ad90e1c8a7c2b3f24137e66dc06f8fceaf51ea54f38467",
+      "hard.jsonl": "8c8f1efb5a04b7016f9c8cd8a70a485f58a70a918aac3e3c1107f41172ca91b6",
+      "original.jsonl": "b2abe9ac8cabd953a3bc452abd4b229da42ca6d0e647bf93f7638076f42db19f"
+    },
+    "public_source_verified": true,
+    "role": "service_fit_public",
+    "usage_scope": "service_fit_only"
+  },
+  "public_selection_score_exported": false,
+  "q": 0.056,
+  "records_sha256": "5e118133ce686b2d12b8d8a58b6e68560221c106eec54438dcfe1110e7ecfe7e",
+  "role": "service_fit_public",
+  "routing": {
+    "cost_fuse": {
+      "arm": 0.9,
+      "enabled": true,
+      "release": 0.85,
+      "warmup": 100
+    },
+    "excluded_types": [],
+    "mode": "routed",
+    "quota": 0.056,
+    "slow_draft": {
+      "max_new_tokens": 256,
+      "reasoning_words": 160
+    },
+    "slow_max_prompt_tokens": 840,
+    "slow_share_fuse": 0.2,
+    "target_slow_share": 0.056,
+    "threshold_rule": "bench.calibrate_margin(public231 rows that can draft, ceil(q x 231) of them)",
+    "threshold_rule_name": "eligible_items",
+    "unparsed_policy": "force_answer"
+  },
+  "selection_sha256": "621fde9159b24e773298511418d3373dcd2da45bed535327c5be01facf218994",
+  "serving_identity_sha256": "0513d121db967ec1a6aaccf627d3c42149d092dd027298da5b53684b030821ea",
+  "slow_calibration": {
+    "by_type": {
+      "choice": {
+        "fast_value": 1.2968395546510096,
+        "inherited": true,
+        "slow_samples": 0,
+        "value": 1.2968395546510096
+      },
+      "noul": {
+        "constant": "service parameter",
+        "fast_value": 0.898,
+        "fitted_fast_value": 0.9459459459459459,
+        "inherited": true,
+        "slow_samples": 0,
+        "value": 0.898
+      },
+      "score": {
+        "fast_value": 1.189207115002721,
+        "inherited": true,
+        "slow_samples": 0,
+        "value": 1.189207115002721
+      }
+    },
+    "routed_collection": {
+      "calibration_routed_quota": 0.1,
+      "collected": false,
+      "max_possible_slow_samples": 23,
+      "reason": "at the calibration-routed quota 0.10 the quota counter admits at most 23 of 231 public decisions to the slow path, fewer than 30 for any type, so every slow type inherits the fast parameter whatever such a collection shows; it is therefore not run"
+    },
+    "rule": "slow samples of a type < 30: the fast parameter of that type (temperature or yes/no confidence) is copied unchanged"
+  },
+  "source_code_sha256": "51269609aa077981a1a5e0bc5775a3d3aad5c1df04f6329b4c199fa2c5477d05",
+  "threshold": {
+    "achieved": 0.05627705627705628,
+    "eligible_below": 13,
+    "eligible_n": 181,
+    "n": 231,
+    "rule": "eligible_items",
+    "target": 0.056,
+    "threshold": 2.250016468674351
+  },
+  "v3_params": {
+    "cost_fuse_arm": 0.9,
+    "cost_fuse_release": 0.85,
+    "draft_max_new_tokens": 256,
+    "draft_reasoning_words": 160,
+    "exclude_noul": false,
+    "noul_p_cal": 0.898,
+    "noul_p_cal_provenance": {
+      "development": {
+        "accuracy": 0.897815362931642,
+        "n": 1419,
+        "standard_error": 0.010166783957967924,
+        "standard_error_kind": "clustered by source group (663 groups)"
+      },
+      "result_sha256": "6cd7105b25050ece8ab7e99cd437db38368f6169bb452908785e413a3cdbe26a",
+      "rule": "Rule (v3, own development data only): the yes/no accuracy of our own held-out development data, rounded to 3 decimals. No leaderboard result of any kind was used for this constant.",
+      "rule_sha256": "be93d0ba00dd1a268f8722955111622ab71f0035ba66c60db86c4e88d35f0dbc"
+    },
+    "schema": "adapter_arm_31b_v3_params_v1",
+    "slow_max_prompt_tokens": 840,
+    "slow_quota": 0.056,
+    "threshold_rule": "eligible_items",
+    "unparsed_policy": "force_answer"
+  },
+  "v3_params_sha256": "b28ed73bb5a36e99a280a47a6b846e0c5b2de54f34a96efa4a10754b71ea7573",
+  "variant": "key_value_aligned"
+}

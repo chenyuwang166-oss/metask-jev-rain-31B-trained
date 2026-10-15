@@ -1,0 +1,117 @@
+{
+  "adapter": {
+    "adapter_manifest_sha256": "6c40a7534f5d2b87cc8591748f85c7958f0259821c98659a60e25308904aa430",
+    "alpha": 32,
+    "files": {
+      "adapter_config.json": {
+        "sha256": "140bb00c832d117f57d29650dabe50e992b2e5064e908aaa29230b3ce19ca2c4",
+        "size": 22953
+      },
+      "adapter_model.safetensors": {
+        "sha256": "2b9568998ffed5d133223ffdff03056be297285c643122db4d45365d0bd86970",
+        "size": 494595208
+      }
+    },
+    "format": "peft-lora",
+    "merged": false,
+    "rank": 16,
+    "stored_tensors": {
+      "dtypes": {
+        "F32": 840
+      },
+      "k_eq_v_layers_without_v_proj_lora": [],
+      "layers": 60,
+      "module_count": 420,
+      "module_prefix": "model.language_model.",
+      "rank": 16,
+      "targets": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "tensor_count": 840,
+      "v_proj_copied_from_k_proj_layers": [
+        5,
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47,
+        53,
+        59
+      ],
+      "variant": "key_value_aligned"
+    },
+    "subdir": "adapter",
+    "target_modules": [
+      "down_proj",
+      "gate_proj",
+      "k_proj",
+      "o_proj",
+      "q_proj",
+      "up_proj",
+      "v_proj"
+    ],
+    "training_base": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+    "training_revision": "1e4d8beecacb8b7590c1d8bedd7335f687bf311f",
+    "variant": "key_value_aligned"
+  },
+  "arm": "trained",
+  "excluded_repository_documents": [
+    "README.md",
+    ".gitattributes"
+  ],
+  "files": {
+    "chat_template.jinja": {
+      "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4",
+      "size": 18683
+    },
+    "config.json": {
+      "sha256": "b100d85e571c25b688e82919d819253063a1defb0e6cee3b9b1c1fbad99bd0c2",
+      "size": 18711
+    },
+    "generation_config.json": {
+      "sha256": "70110aa886fa7ee25ce47346d102dd29ca5f967500490b4362fc72068e1db70a",
+      "size": 208
+    },
+    "model.safetensors": {
+      "sha256": "1b9b1d622a93f02c0d33f98e502f233b5d707443af6ddc464ed0bf5498506c20",
+      "size": 23265352448
+    },
+    "processor_config.json": {
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+      "size": 1689
+    },
+    "tokenizer.json": {
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "size": 32169626
+    },
+    "tokenizer_config.json": {
+      "sha256": "b8045a4576903e86903291d5cbdd4adfc8859e9ce3c98621bdbd957f73ed394b",
+      "size": 3728
+    }
+  },
+  "format": "compressed-tensors",
+  "identity_sha256": "0513d121db967ec1a6aaccf627d3c42149d092dd027298da5b53684b030821ea",
+  "pricing_base_model": "google/gemma-4-31B-it",
+  "publish_authority": "repository owner",
+  "repo_id": "MeTask-Rain/metask-jev-rain-31B-trained",
+  "revision": "9392335f5a17395ecd70049f85b1909d53500144",
+  "served_base": {
+    "files_byte_identical": true,
+    "model_sha256": "ca750c75ea690276947dfc6d3c775668282e9180e4c56f180bfad912fed606a5",
+    "repo_id": "google/gemma-4-31B-it-qat-w4a16-ct",
+    "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d"
+  },
+  "status": "evaluated_service_mirror",
+  "training_base": {
+    "repo_id": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+    "revision": "1e4d8beecacb8b7590c1d8bedd7335f687bf311f"
+  }
+}

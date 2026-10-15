@@ -1,0 +1,30 @@
+{
+  "adapter_files": {
+    "adapter_config.json": {
+      "sha256": "140bb00c832d117f57d29650dabe50e992b2e5064e908aaa29230b3ce19ca2c4",
+      "size": 22953
+    },
+    "adapter_model.safetensors": {
+      "sha256": "2b9568998ffed5d133223ffdff03056be297285c643122db4d45365d0bd86970",
+      "size": 494595208
+    }
+  },
+  "arm": "trained",
+  "base_fit_service_lock_sha256": "50a4c56c5c9fbfbde9c127ad0247736fa16355bc8deae90b5311f3ba19a03d44",
+  "calibration_sha256": "5b60ca8516b93982724145bc2227404c4c53a6f5657b4bf2155108c2f001685f",
+  "complete": true,
+  "config_file_sha256": "32bbe4fe96f56bbde05c11769969c880ae8b1f066d15d0980cfed727dab602e0",
+  "config_sha256": "5cebe511ef103d5104539d3ffa34435274c6a3bc08dbf40d5f80f9ec0ce3455a",
+  "f_service_code_sha256": "51269609aa077981a1a5e0bc5775a3d3aad5c1df04f6329b4c199fa2c5477d05",
+  "fit_report_sha256": "fc20f2f631c98f043f7c02d4cadbe8122580ee400377eef5420d93621111248b",
+  "model_sha256": "ddb0a8178194de6d3a3ed6e5a00ea01d6d89c143d43d169a68ad9561636cf4ff",
+  "protocol": "adapter_arm_31b_v3",
+  "q": 0.056,
+  "selection_sha256": "621fde9159b24e773298511418d3373dcd2da45bed535327c5be01facf218994",
+  "service_code_sha256": "51269609aa077981a1a5e0bc5775a3d3aad5c1df04f6329b4c199fa2c5477d05",
+  "serving_identity_sha256": "0513d121db967ec1a6aaccf627d3c42149d092dd027298da5b53684b030821ea",
+  "status": "prepared_not_frozen",
+  "v3_params_file_sha256": "5ffa6d0049d06452d3478a3b2825b0ebd9416b064d8410deae63c86648e7ceaf",
+  "v3_params_sha256": "b28ed73bb5a36e99a280a47a6b846e0c5b2de54f34a96efa4a10754b71ea7573",
+  "variant": "key_value_aligned"
+}

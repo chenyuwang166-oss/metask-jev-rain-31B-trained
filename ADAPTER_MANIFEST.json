@@ -1,0 +1,134 @@
+{
+  "adapter_config_normalization": {
+    "changed_fields": [
+      "base_model_name_or_path",
+      "revision"
+    ],
+    "rule": "Only these keys differ from the selected checkpoint adapter_config.json.",
+    "serving_values": {
+      "base_model_name_or_path": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+      "revision": "1e4d8beecacb8b7590c1d8bedd7335f687bf311f"
+    }
+  },
+  "files": {
+    "adapter_config.json": {
+      "sha256": "140bb00c832d117f57d29650dabe50e992b2e5064e908aaa29230b3ce19ca2c4",
+      "size": 22953
+    },
+    "adapter_model.safetensors": {
+      "sha256": "2b9568998ffed5d133223ffdff03056be297285c643122db4d45365d0bd86970",
+      "size": 494595208
+    }
+  },
+  "key_value_alignment": {
+    "added_count": 20,
+    "added_tensors": [
+      "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.17.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.17.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.29.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.29.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.35.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.35.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.41.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.41.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.47.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.47.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.5.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.5.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.53.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.53.self_attn.v_proj.lora_B.weight",
+      "base_model.model.model.language_model.layers.59.self_attn.v_proj.lora_A.weight",
+      "base_model.model.model.language_model.layers.59.self_attn.v_proj.lora_B.weight"
+    ],
+    "applied": true,
+    "layers": [
+      5,
+      11,
+      17,
+      23,
+      29,
+      35,
+      41,
+      47,
+      53,
+      59
+    ],
+    "rule": "v_proj.lora_A/B = byte copy of k_proj.lora_A/B in every attention_k_eq_v layer; all source tensors and their data unchanged"
+  },
+  "kind": "unmerged_lora_serving_adapter",
+  "lora": {
+    "lora_alpha": 32,
+    "merged": false,
+    "peft_type": "LORA",
+    "r": 16,
+    "stored_tensors": {
+      "dtypes": {
+        "F32": 840
+      },
+      "k_eq_v_layers_without_v_proj_lora": [],
+      "layers": 60,
+      "module_count": 420,
+      "module_prefix": "model.language_model.",
+      "rank": 16,
+      "targets": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "tensor_count": 840,
+      "v_proj_copied_from_k_proj_layers": [
+        5,
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47,
+        53,
+        59
+      ],
+      "variant": "key_value_aligned"
+    },
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "protocol": "adapter_arm_31b_v1",
+  "schema_version": 1,
+  "served_base": {
+    "files_byte_identical": true,
+    "model_sha256": "ca750c75ea690276947dfc6d3c775668282e9180e4c56f180bfad912fed606a5",
+    "repo_id": "google/gemma-4-31B-it-qat-w4a16-ct",
+    "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d"
+  },
+  "source": {
+    "adapter_model_sha256": "9dbf1acc152ef1a327b934b9674c232eec1129bee0fad51707021ad16285fc27",
+    "checkpoint_adapter_config_sha256": "52553a60f6155af2707d05d11d17a4e0a3d20c35233ea9261fdc56a7e7b4c4ca",
+    "checkpoint_complete_sha256": "056e81fa6b71062de77b6a640ffdb91c3680a16ffeb0154a6a10cf58b4c325fb",
+    "checkpoint_step": 150,
+    "run_identity_sha256": "7c94956f79b06b60a1066ebbf094e346ade3c70e9b900888563d878b2850b2b3",
+    "selection_sha256": "621fde9159b24e773298511418d3373dcd2da45bed535327c5be01facf218994",
+    "training_manifest_sha256": "ced7511dd24f895ad18a65616736ddbad4a4a906c3c015879e7d8148a49fa879"
+  },
+  "subdir": "adapter",
+  "training_base": {
+    "repo_id": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+    "revision": "1e4d8beecacb8b7590c1d8bedd7335f687bf311f"
+  },
+  "variant": "key_value_aligned"
+}

@@ -1,0 +1,136 @@
+{
+  "models": {
+    "metask-gemma4-31b-lora-w4a16": {
+      "fallback": {
+        "by_type": {
+          "choice": {
+            "count": 139,
+            "fitted": true,
+            "inherited": true,
+            "inherited_from": "fast",
+            "nll": 0.268809886282054,
+            "temperature": 1.2968395546510096
+          },
+          "noul": {
+            "constant_source": "service parameter (fit_report.json noul_constant)",
+            "count": 74,
+            "fitted": true,
+            "fitted_p_cal": 0.9459459459459459,
+            "inherited": true,
+            "inherited_from": "fast",
+            "p_cal": 0.898
+          },
+          "score": {
+            "count": 18,
+            "fitted": true,
+            "inherited": true,
+            "inherited_from": "fast",
+            "nll": 0.26993267192031306,
+            "temperature": 1.189207115002721
+          }
+        },
+        "noul_calibration": {
+          "p_cal": 0.898
+        },
+        "placeholder": false,
+        "status": "temperatures: public231 in-sample fast fit (unchanged); yes/no constant: service parameter, see fit_report.json noul_constant",
+        "temperature_by_kind": {
+          "choice": 1.2968395546510096,
+          "noul": "one_bin",
+          "score": 1.189207115002721
+        }
+      },
+      "fast": {
+        "by_type": {
+          "choice": {
+            "count": 139,
+            "fitted": true,
+            "nll": 0.268809886282054,
+            "temperature": 1.2968395546510096
+          },
+          "noul": {
+            "constant_source": "service parameter (fit_report.json noul_constant)",
+            "count": 74,
+            "fitted": true,
+            "fitted_p_cal": 0.9459459459459459,
+            "p_cal": 0.898
+          },
+          "score": {
+            "count": 18,
+            "fitted": true,
+            "nll": 0.26993267192031306,
+            "temperature": 1.189207115002721
+          }
+        },
+        "noul_calibration": {
+          "p_cal": 0.898
+        },
+        "placeholder": false,
+        "status": "temperatures: public231 in-sample fast fit (unchanged); yes/no constant: service parameter, see fit_report.json noul_constant",
+        "temperature_by_kind": {
+          "choice": 1.2968395546510096,
+          "noul": "one_bin",
+          "score": 1.189207115002721
+        }
+      },
+      "fitted_for": {
+        "adapter": "model-subdir:adapter",
+        "backend": "vllm",
+        "margin_kind": "logratio",
+        "max_new_tokens": 256,
+        "max_prompt_tokens": 6653,
+        "model_key": "metask-gemma4-31b-lora-w4a16",
+        "prompt_sha": "e18ed7a06eb52f1b351458f384710a2c240aaf2b4f64d916b776c6d18ca3f938",
+        "quant": "awq",
+        "reasoning_words": 160,
+        "request_contract": "typesafe.criteria.v1"
+      },
+      "placeholder": false,
+      "slow": {
+        "by_type": {
+          "choice": {
+            "applied_rule": "slow samples of a type < 30: the fast parameter of that type (temperature or yes/no confidence) is copied unchanged",
+            "count": 0,
+            "fast_count": 139,
+            "fitted": false,
+            "inherited": true,
+            "inherited_from": "fast",
+            "status": "inherited"
+          },
+          "noul": {
+            "applied_rule": "slow samples of a type < 30: the fast parameter of that type (temperature or yes/no confidence) is copied unchanged",
+            "constant_source": "service parameter (fit_report.json noul_constant)",
+            "count": 0,
+            "fast_count": 74,
+            "fitted": false,
+            "fitted_p_cal": 0.9459459459459459,
+            "inherited": true,
+            "inherited_from": "fast",
+            "p_cal": 0.898,
+            "status": "inherited"
+          },
+          "score": {
+            "applied_rule": "slow samples of a type < 30: the fast parameter of that type (temperature or yes/no confidence) is copied unchanged",
+            "count": 0,
+            "fast_count": 18,
+            "fitted": false,
+            "inherited": true,
+            "inherited_from": "fast",
+            "status": "inherited"
+          }
+        },
+        "held_out_validated": false,
+        "noul_calibration": {
+          "p_cal": 0.898
+        },
+        "placeholder": false,
+        "status": "temperatures: public231 in-sample; slow types with fewer than 30 slow samples inherit fast (unchanged); yes/no constant: service parameter, see fit_report.json noul_constant",
+        "temperature_by_kind": {
+          "choice": 1.2968395546510096,
+          "noul": "one_bin",
+          "score": 1.189207115002721
+        }
+      }
+    }
+  }
+}
