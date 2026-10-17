@@ -13,7 +13,7 @@
     "MODEL_CARD.md": "b755a327a501860b4243122baef74a449dd715d6e32e579af6bce1ed023169fc",
     "MODEL_MANIFEST.json": "d82f71ba20a912a3d5fe1ef8a5a2f8e004be16e7c67df2ee5308864b6832eb5f",
     "PIPELINE_PROVENANCE.json": "1eabd08c963a75b215083d340b4e3582be2ca84218de5183d70c19592f2de261",
-    "README.md": "6d65e9ef6db601d5d697252e1edc44be7b1563395aaa8a2c62d31f3c58bc85c3",
+    "README.md": "f4a6da96c7918a3c9e01cbc215cb2c4e7a14a66e6dac3af9ccbb345be30cba6c",
     "SERVICE_LOCK.json": "6240d7e0b953547bf837e81ffb54aa5db650fc9134c9a3d48e938c6d5eacac4c",
     "attention.py": "9c887f4e5f8ea2858f79a629e684ea71b07359d49d2a0bf31b5f993cb367e547",
     "backends.py": "e0613ebb8e05fd22673e0502a131dcc33a5af563998cf5a12143878131518f93",
@@ -33,7 +33,8 @@
     "selftest.py": "08d5cfceb703748b407ce0223dee2807bf49f27b4f9bbd28c43e9738673699e6",
     "selftest.sh": "d0cc8cc9068667aec3525861e0d61ac8fc9bb617b90f7fee7818af9dc0af154e",
     "serve.sh": "13008367a9b37988de9c7acfa1d2340ca7dea502fd352887fc61783749d279c3",
-    "server.py": "2cb085c1bf0f68758097afee55ecad2ef7ecd76dcced00c1b3f927b49151e213"
+    "server.py": "2cb085c1bf0f68758097afee55ecad2ef7ecd76dcced00c1b3f927b49151e213",
+    "TECHNICAL_NOTES.md": "66cad2f505ad0a4dc421b7c520dc92e253a98614ddc08f640aafd577f8762989"
   },
   "schema": "public_service_mirror_v1",
   "source_files": {

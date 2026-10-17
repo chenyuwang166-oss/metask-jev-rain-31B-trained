@@ -1,45 +1,34 @@
 # metask-jev-rain-31B-trained
 
-| Field | Official result |
-|---|---|
-| Model / evaluated package | metask-jev-rain-31B-trained / service v3 |
-| Size / trained weights | 31B / trained LoRA adapter, not merged |
-| Benchmark / version | JevBench v1.6.18 |
-| Metric / score | Capability score / **79.6** (leaderboard display: 79.597) |
-| Rank / scope | **3rd** on the merged default open-weights capability leaderboard |
-| Result snapshot date | 2026-10-14 |
-| Measurement | Official evaluator measurement; measured 2026-10-13, first published in v1.6.17 |
-| Sources | [Official leaderboard](https://benchmarkheaven.com/jev-models), [v1.6.18 result snapshot](https://benchmarkheaven.com/api/jevbench/v1.6.18) |
+MeTask's 31B model makes structured decisions: given a state and a question, this service returns a judgment and probabilities for the available options. The [trained weights](https://huggingface.co/MeTask-Rain/metask-jev-rain-31B-trained) can be downloaded for private deployment. As of **2026-10-17**, its organizer-measured JevBench Capability Score is **79.6**, ranked **#3** in the qualifying open-weight capability ranking (service v3).
 
-截至 2026-10-14，31B 训练版 service v3 在 JevBench v1.6.18 合并默认开源权重能力榜获榜方实测能力分 **79.6，排名第 3**。
+The entries ranked #3 and #5 use the same 31B model and identical weights. The #3 evaluation (79.6) updated the service layer, including the probability setting for yes/no questions; the earlier service scored 78.9. We proactively disclosed the changes to the benchmark operator, which records them on the leaderboard. The weights are public and available for download, use and inspection.
 
-The rank is scoped to the merged default open-weights capability leaderboard, not the
-single-batch API rank or the composite score. It is a dated result, not a claim of a current rank.
-The 78.9 leaderboard entry is an earlier service version using the same LoRA weights
-(first measured in v1.6.10); the result cited here is service v3 (79.6).
+The leaderboard records this disclosure on the #3 row. The yes/no probability constant actually deployed is the yes/no accuracy on our own 1,419-item development set; an earlier draft value that had drawn on the previous row's published aggregate was dropped before submission. The data behind every service parameter is listed in the [service disclosure](DISCLOSURE.md).
+
+This is the public service-code mirror; the score belongs to the evaluated HF service v3 release, not a new evaluation of this mirror. Service code is at this repository's root and under `service/` on HF. See [technical notes](TECHNICAL_NOTES.md) for the evaluated revision and mirror verification.
+
+## Current trained models
+
+Results checked on **2026-10-17** against [JevBench board v1.7.46](https://benchmarkheaven.com/jev-models) (page updated 2026-10-16). Scores are organizer-measured **Capability Scores**. Capability ranks are among **129 qualifying open-weight systems** under the official cost and latency limits; they are not composite-score ranks. The leaderboard's 'official #' label refers to its separate composite ranking.
+
+For these full-set results, the operator measures each system on 1,500 decisions: 1,200 sealed items that submitters cannot access and 300 public items.
+
+| Model | Capability Score | Capability rank | Weights | Service |
+|---|---:|---|---|---|
+| MeTask 31B (service v3) | 79.6 | 3 | [Model card](https://huggingface.co/MeTask-Rain/metask-jev-rain-31B-trained) | [31B service](https://github.com/chenyuwang166-oss/metask-jev-rain-31B-trained) |
+| MeTask 12B | 77.9 | 6; highest among entries labeled 12B in the system name | [Model card](https://huggingface.co/MeTask-Rain/metask-jev-rain-12B-trained) | [12B service](https://github.com/chenyuwang166-oss/metask-jev-rain-12B-trained) |
+
+
+Published by MeTask under the public GitHub account `chenyuwang166-oss`. Project and contact entry point: [MeTask-Rain](https://huggingface.co/MeTask-Rain).
+
+## License and attribution
+
+We trained this model for decision tasks on Google's open-weight Gemma 4 31B base. Use the base checkpoint together with our trained adapter. Model provenance, adapter structure and quantization are documented in the [model card](MODEL_CARD.md) and [disclosure](DISCLOSURE.md).
+
+The applicable license is provided in [LICENSE](LICENSE). Retain the applicable license and attribution notices when redistributing.
 
 Contact: chenyuwang166@gmail.com
-
-Evaluated version: [`2feff076f07711fe2fefe7a6fdcedfe4132b773e`](https://huggingface.co/MeTask-Rain/metask-jev-rain-31B-trained/tree/2feff076f07711fe2fefe7a6fdcedfe4132b773e).
-This repository is its public service-code mirror, with documentation and packaging-hygiene
-corrections only; all runtime files are byte-for-byte identical to the evaluated service.
-See [CHANGES.md](CHANGES.md).
-Service code is at the root of this GitHub mirror; the same code is under `service/`
-in the HF model repository. Paths beginning with `service/` in the model card refer to HF.
-Weights, calibration, routing, decoding settings and decision computation are unchanged.
-The model manifest's earlier weight revision is retained because it pins the same model files.
-The official score above belongs to the evaluated HF version; this mirror has not been re-evaluated.
-
-A self-hosted decision service for JevBench. It serves `POST /v1/systemone` for the unchanged
-`typesafe` adapter of the official harness, and `GET /health`. The model has two parts that are
-loaded together and never merged: Google's official W4A16 checkpoint
-`google/gemma-4-31B-it-qat-w4a16-ct` (unchanged), and our LoRA adapter, which vLLM applies to every
-request. Facts and measurement conditions are in [DISCLOSURE.md](DISCLOSURE.md).
-
-For a quick check: (1) read the dated official result and its sources above;
-(2) check the evaluated revision and mirror scope above; (3) follow [Run](#run) below.
-Evidence files (`MEASURED_EVIDENCE.json`, `FREEZE.json`, `fit_report.json`, and related
-manifests) support detailed audits; most readers can use these three checks.
 
 ## Requirements
 
@@ -165,11 +154,7 @@ new `WORK`.
 The evaluated health response retains `threshold_identity.quant: "awq"` as a historical
 configuration alias; the actual backend is **compressed-tensors W4A16**, reported by
 `quantization_kernel`. There is no top-level `quant` field. This mirror preserves that behavior.
-All runtime files are byte-for-byte identical to the evaluated version, which passed the
-A100 80GB cold run (231/231 public items, zero failed). No additional mirror GPU run is required
-for these documentation and packaging changes. To verify runtime identity, run
-`python3 -B pkg_check.py`; compare the runtime SHA-256 values with `MIRROR.json.source_files`
-and the pinned HF service files for independent verification.
+Mirror identity and historical validation: [technical notes](TECHNICAL_NOTES.md).
 
 ## Package checks (offline, no GPU or network)
 
